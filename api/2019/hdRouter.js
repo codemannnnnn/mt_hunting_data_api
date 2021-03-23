@@ -5,7 +5,13 @@ const router = express.Router();
 const db = require("./hdModel");
 
 router.get("/", (req, res) => {
-  res.status(200).json("Hi from the hdRouter/2019");
+  db.findAll()
+    .then((e) => {
+      res.status(200).json({ data: e });
+    })
+    .catch((err) => {
+      res.status(400).json({ msg: err });
+    });
 });
 
 router.post("/", (req, res) => {
