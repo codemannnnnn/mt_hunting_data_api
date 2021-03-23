@@ -1,6 +1,5 @@
 exports.up = function (knex) {
   return knex.schema.createTable("2019", (tbl) => {
-    tbl.string("id").notNullable().unique().primary();
     tbl.string("licenseYear");
     tbl.string("huntingDistrict");
     tbl.string("residency");

@@ -1,5 +1,5 @@
 node_modules
 .env
-mt_hunting_data_backend_api/docker/
+docker/
 data/pg/
 data/pgadmin/
