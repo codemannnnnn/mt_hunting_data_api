@@ -7,7 +7,7 @@ const db = require("./hdModel");
 router.get("/", (req, res) => {
   db.findAll()
     .then((e) => {
-      res.status(200).json({ data: e });
+      res.status(200).json(e);
     })
     .catch((err) => {
       res.status(400).json({ msg: err });
