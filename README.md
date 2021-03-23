@@ -1,4 +1,4 @@
-# Backend API/PostgreSQl DB for Montana Hunting Data
+# Backend API/PostgreSQL DB for Montana Hunting Data
 
 ### Postgres DB and PGAdmin containers included in docker-compose.yml file
 
