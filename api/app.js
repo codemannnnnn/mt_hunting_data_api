@@ -7,6 +7,7 @@ const helmet = require("helmet");
 //import required router files
 const example = require("./example/exampleRouter");
 const hd2019 = require("./2019/hdRouter");
+const hd2018 = require("./2018/hdRouter");
 
 //define app
 const app = express();
@@ -23,6 +24,7 @@ app.use(
 //define routes linking with imported files
 app.use("/example", example);
 app.use("/hd2019", hd2019);
+app.use("/hd2018", hd2018);
 
 //test api route
 app.get("/", (req, res) => {
