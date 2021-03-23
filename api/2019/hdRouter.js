@@ -14,10 +14,11 @@ router.get("/", (req, res) => {
     });
 });
 
-router.post("/", (req, res) => {
+router.post("/", async (req, res) => {
   const body = req.body;
   try {
-    db.create(body)
+    await db
+      .create(body)
       .then((e) => {
         res.status(200).json({ message: "New HD Column Created", data: e[0] });
       })
